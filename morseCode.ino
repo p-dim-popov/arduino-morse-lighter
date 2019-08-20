@@ -59,13 +59,13 @@ void loop()
       timerDelay.start(5000); //And start it again
       if (digitalRead(dot) == 0) //Check if the dot button is pressed
       {
-        Serial.println('.'); //Print on the serial montor that a dot is entered to the array
+        Serial.println('.'); //Print on the serial monitor that a dot is entered to the array
         morseCode[pos++] = '.'; //Add a dot to the array
         delay(clickingTime); //Wait the pressumed clickingTime to enter
       }
       else if(digitalRead(dash) == 0) //Check if the dot button is pressed
       {
-        Serial.println('-'); //Print on the serial montor that a dash is entered to the array
+        Serial.println('-'); //Print on the serial monitor that a dash is entered to the array
         morseCode[pos++] = '-'; //Add a dash to the array
         delay(clickingTime); //Wait the pressumed clickingTime to enter
       }
@@ -74,13 +74,13 @@ void loop()
         delay(clickingTime); //Wait the pressumed clickingTime to enter
         if(digitalRead(space) == 0) //And now check if the dot button is held for twice the clicking time to enter a doubled space
         {
-          Serial.println('/'); //Print on the serial montor that a slash is entered to the array
+          Serial.println('/'); //Print on the serial monitor that a slash is entered to the array
           morseCode[pos++] = '/'; //Add a slash to the array
           delay(clickingTime); //Wait the pressumed clickingTime to enter
         }
         else //if space button is not held to enter a slash
         {
-          Serial.println(' '); //Print on the serial montor that a space is entered to the array
+          Serial.println(' '); //Print on the serial monitor that a space is entered to the array
           morseCode[pos++] = ' '; //Add a space to the array
         }
       }
